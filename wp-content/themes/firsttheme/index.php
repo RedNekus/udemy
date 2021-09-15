@@ -6,21 +6,24 @@
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
         </h2>
         <div>
-            Posted on
-            <a href="<?php echo get_permalink(); ?>">
-                <time datetime="<?php echo get_the_date( "c" ); ?>"><?php echo get_the_date(); ?></time>
-            </a>
-            By <a href="<?php echo get_author_posts_url( get_the_author_meta('ID') ); ?>" ><?php echo get_the_author(); ?></a>
+            <?php firsttheme_post_meta(); ?>
         </div>
         <div>
             <?php the_excerpt(); ?>
         </div>
-        <a href="<?php echo get_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-            Read more
-        </a>
+        <?php firsttheme_readmore_link(); ?>
     <?php endwhile; ?>
     <?php the_posts_pagination(); ?>
 <?php else: ?>
-    <p>Sorry, no posts matched your criteria.</p>
+    <p><?php esc_html_e('Sorry, no posts matched your criteria.', 'firsttheme'); ?></p>
 <?php endif; ?>
+<?php
+    $city = 'London';
+    echo esc_html( "Your city is ", 'firsttheme' ) . $city;
+    printf(
+        /* translators: %s is the city name */
+        esc_html( "Your city is %s", 'firsttheme' ),
+        $city
+    );
+?>
 <?php get_footer(); ?>
