@@ -18,8 +18,8 @@
     <p><?php esc_html_e('Sorry, no posts matched your criteria.', 'firsttheme'); ?></p>
 <?php endif; ?>
 <?php
-    $city = 'London';
-    echo esc_html( "Your city is ", 'firsttheme' ) . $city;
+    $city = 'Minsk';
+    echo esc_html( "Your city is ", 'firsttheme' ) . $city ."<br>";
     printf(
         /* translators: %s is the city name */
         esc_html( "Your city is %s", 'firsttheme' ),
