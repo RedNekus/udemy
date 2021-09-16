@@ -37,7 +37,10 @@ const paths = {
 
 export const serve = (done) => {
     server.init({
-        proxy: "http://udemy.local"
+        proxy: "http://udemy.local",
+        host: "udemy.local",
+        port: 3000,
+        open: 'external'
     });
     done();
 }
