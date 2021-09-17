@@ -6,5 +6,5 @@ console.log(x);
 console.log('test');
 
 $('body').click(() => {
-    console.log('Test');
+    console.log('Test click jQuery');
 });
