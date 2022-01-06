@@ -1,6 +1,6 @@
 <?php
     function _themename_assets() {
-        wp_enqueue_style( '_themename-stylesheet', get_template_directory_uri(  ) . '/dist/assets/css/bundle.css', [], 'all' );
+        wp_enqueue_style( '_themename-stylesheet', get_template_directory_uri(  ) . '/dist/assets/css/bundle.css', [], '1.0.0','all' );
         //wp_enqueue_script('');
         wp_enqueue_script( '_themename-scripts', get_template_directory_uri(  ) . '/dist/assets/js/bundle.js', ['jquery'], '1.0.0', true );
     }
